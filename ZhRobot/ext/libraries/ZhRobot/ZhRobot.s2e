@@ -1,0 +1,273 @@
+{	"extensionName": "ZhRobot", 
+	"extensionPort": 0,
+	"sort":3,
+	"firmware":"1.2.103",
+	"javascriptURL":"js/ZhRobot.js",
+	"isMakeBlockBoard":true,
+	"blockSpecs": [
+		["h","Main Program","runArduino",{"src":" ","inc":"#include <RobotLab.h>\n","def":"","setup":"","loop":""}],
+		
+		["-"],
+		
+		["w","set motor%d.motorPort speed %d.motorspeed","runMotor", "M1", 0,
+		{"encode":"{d0}{s1}","setup":"","inc":"","def":"","work":"SetMotor({0},{1});\n","loop":""}],
+		
+		["w","clear motor encoder port %d.motorPort","runSetEncoder", "M1",
+		{"encode":"{d0}","setup":"","inc":"","def":"","work":"SetEncoder({0});\n","loop":""}],		
+		
+		["w","set encoder motor%d.motorPort speed %d.motorspeed code %n","runMotorEncoder", "M1", 0, 0,
+		{"encode":"{d0}{s1}","setup":"","inc":"","def":"","work":"setEncoderMotorAngle({0},{1},{2});\n","loop":""}],
+		
+		["w","buzzer port %d.robportPWM tone %d.note beat %d.beats","runBuzzer", "D9", "do", "Half",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"SetBuzzer({0},{1},{2});\n","loop":""}],
+		
+		["w", "set DO %d.robport as %d.highlow","runIO", "D9", "1",
+		{"encode":"{d0}{d1}","setup":"","inc":"","def":"","work":"SetIO({0},{1});\n","loop":""}],
+		
+		["w", "set led %d.robport as %d.switch","runled", "D9", "On",
+		{"encode":"{d0}{d1}","setup":"","inc":"","def":"","work":"SetLed({0},{1});\n","loop":""}],
+		
+		["w", "set servo %d.robportPWM angle %d.servovalue","runServo", "D9", 90,
+		{"encode":"{d0}{d1}","setup":"","inc":"","def":"","work":"SetServo({0},{1});\n","loop":""}],
+		
+		["w", "IR transmitter sensor port %d.robportPWM data %d.irdata","setIRData","D9",0,
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"SetIRData({0},{1});\n","loop":""}],		
+		
+		["w", "Set LED matrix %m.nPort brightness %d.brightdata","runLEDMatrixBrightness","IIC1","0",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"SetLEDMatrixBrightness({0},{1});\n","loop":""}],
+					
+		["w", "LED matrix %m.nPort x:%n y:%n draw:%m.drawFace","showDraw", "IIC1", 0,0,"    ",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"SetLEDMatrix({0},{1},{2},GetLEDMatrixBuffer(new const unsigned char[16]{{3}}));\n","loop":""}],
+		
+		["w", "LED matrix %m.nPort X:%d.xn Y:%d.xn as %d.switch","runshowDrawXY","IIC1","1","1","On",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"SetLEDMatrixXY({0},{1},{2},{3});\n","loop":""}],
+		
+		["w", "Set LED Display %m.nPort 4Digit brightness %d.brightdata4d","run4DigitBrightness","IIC1","1",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"Set7SegDisplayBrightness({0},{1});\n","loop":""}],
+		
+		["w", "LED Display 4Digit %m.nPort Clear","run4DigitClear","IIC1",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"Set7SegDisplayClear({0});\n","loop":""}],
+				
+		["w", "LED Display 4Digit %m.nPort number:%n","run4DigitNum","IIC1","0",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"Set7SegDisplayNum({0},{1});\n","loop":""}],
+		
+		["w", "LED Display 4Digit %m.nPort dot as %d.switch","run4Digitdot","IIC1","On",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"Set7SegDisplayDot({0},{1});\n","loop":""}],
+		
+		["w", "LED Display 4Digit %m.nPort postion %d.led4postion number %d.num0a9","run4DigitPN","IIC1","4","0",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"Set7SegDisplayChar({0},{1},{2});\n","loop":""}],
+		
+		["w", "LED Display 4Digit %m.nPort postion %d.led4postion char %m.led4","run4DigitPN1","IIC1","4","a",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"Set7SegDisplayAscii({0},{1},{2});\n","loop":""}],
+
+		["w", "Fan port %d.robportPWM as %d.fanspeed","runFan","D9","50",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"SetFan({0},{1});\n","loop":""}],
+		
+		["w", "LCD Display %m.nPort Clear","runLCDClear","IIC1",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"SetLcdClear({0});\n","loop":""}],
+		
+		["w", "LCD Display %m.nPort x:%d.xLCD y:%d.yLCD as number:%n","runLCDNum","IIC1","1","1","1234567890",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"SetLcdNum({0},{1},{2},{3});\n","loop":""}],
+		
+		["w", "LCD Display %m.nPort x:%d.xLCD y:%d.yLCD as number:%n bits:%n.bits","runLCDNumBits","IIC1","1","1","1","1",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"SetLcdNumBits({0},{1},{2},{3},{4});\n","loop":""}],
+				
+		["w", "LCD Display %m.nPort x:%d.xLCD y:%d.yLCD as string:%m","runLCDString","IIC1","1","1","Hello!",
+		{"encode":"{s3}","setup":"","inc":"","def":"","work":"SetLcdString({0},{1},{2},{3});\n","loop":""}],
+		
+		["w", "LCD Display %m.nPort light as %d.switch","runLCDLight","IIC1","On",
+		{"encode":"{s0}","setup":"","inc":"","def":"","work":"SetLcdsetBacklight({0},{1});\n","loop":""}],
+		
+		["-"],
+		["R", "read AD data %d.adport","ADget","A0",
+		{"encode":"{d0}","setup":"","inc":"","def":"","work":"GetAdc({0})","loop":""}],
+		
+		["R", "light sensor %d.adport","getAdc","A0",
+		{"encode":"{d0}","setup":"","inc":"","def":"","work":"GetAdc({0})","loop":""}],
+		
+		["R", "get motor encoder port %d.motorPort","getEncoder","M1",
+		{"encode":"{d0}","setup":"","inc":"","def":"","work":"GetEncoder({0})","loop":""}],
+		
+		["R", "sound sensor %d.adport","getSoundSensor","A0",
+		{"encode":"{d0}","setup":"","inc":"","def":"","work":"GetAdc({0})","loop":""}],
+		
+		["R", "ultrasonic sensor %d.ulport distance","getUltrasonic","IIC1",
+		{"encode":"{d0}","setup":"","inc":"","def":"","work":"GetUltrasonic({0})","loop":""}],
+				
+		["R", "IR receiver sensor port %d.robportPWM","getIRReceiver","D9",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetIRDecodeType({0})","loop":""}],
+		
+		["R", "Flame sensor port %d.adport","getFlame","A0",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetAdc({0})","loop":""}],
+		
+		["R", "Rotating potentiometer sensor port %d.adport","getRotatP","A0",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetAdc({0})","loop":""}],
+		
+		["R", "Joy stick sensor port %d.adport","getJoyStick","A0",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetAdc({0})","loop":""}],
+		
+		["R", "Slide position sensor port %d.adport","getSlidePosition","A0",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetAdc({0})","loop":""}],
+		
+		["R", "Humiture sensor port %d.robportPWM mode %m.Humode","getHumiture","D9","temperature",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetDHT({0},{1})","loop":""}],
+
+		["R", "Water level sensor port %d.adport","getWaterLevel","A0",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetAdc({0})","loop":""}],
+
+		["R", "soil moisture content sensor port %d.adport","soilMoisture","A0",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetAdc({0})","loop":""}],
+				 
+		["R", "AHRS sensor %d.ulport data %d.ahrsdata","getAttitude","IIC1","pitch",
+		{"encode":"{d0}","setup":"","inc":"","def":"","work":"GetAhrs({0},{1})","loop":""}],
+
+		["R", "2.4G wireless module port UART","get24G","IIC1",
+		{"encode":"{d0}","setup":"","inc":"","def":"","work":"Get24GByte()","loop":""}],
+
+
+		
+		["-"],
+		["B", "read DI data %d.robportPWM","IOget","D9",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetIO({0})","loop":""}],
+		
+		["B", "button %d.robport","getIO","D9",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetIO({0})","loop":""}],
+		
+		["B","port %d.robportPWM ir remote %d.ircode pressed","getIrRemote","D9","0",
+		{"encode":"{n0}{d0}","setup":"","inc":"","def":"","work":"GetIRKey({0},{1})","loop":""}],
+		
+		["B", "touch sensor port %d.robport","getTouch","D9",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetIO({0})","loop":""}],
+		
+		["B", "IR detector sensor port %d.robport","getIRDetector","D9",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetIO({0})","loop":""}],				
+		
+		["B", "IR tracker sensor port %d.robport","getIRTracker","D9",
+		{"encode":"{n7}{d0}","setup":"","inc":"","def":"","work":"GetIO({0})","loop":""}],
+		
+		
+		
+		
+		["-"],	
+		
+		["R", "timer","getTimer", "0",
+		{"encode":"{n0}","setup":"","inc":"","def":"","work":"GetTime()","loop":""}],
+		
+		["w", "reset timer","resetTimer", "0",
+		{"encode":"{n0}","setup":"","inc":"","def":"","work":"SetTimeZero();\n","loop":""}]
+			
+	],
+	"menus": {
+		"led4":["clear","a","b","c"],
+		"highlow":["0","1"],
+		"bits":["1","2","3","4","5","6","7","8","9","10"],
+		"Humode":["humidity","temperature"],
+		"brightdata4d":["1","2","3","4","5","6","7"],
+		"num0a9":["0","1","2","3","4","5","6","7","8","9"],
+		"led4postion":["1","2","3","4"],
+		"nPort":["IIC1","IIC0","UART"],
+		"brightdata":["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],
+		"xn":["1","2","3","4","5","6","7","8"],
+		"xLCD":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"],
+		"yLCD":["1","2"],
+		"normalPort":["Port1","Port2","Port3","Port4"],
+		"irdata":["0"],
+		"ulport":["IIC1","IIC0"],
+		"adport":["A0","A1","A2","A3","A4","A5","A6","A7"],
+		"robport":["D9","D10","D11","A0_","A1_","A2_","A3_","A4_","A5_"],
+		"robportPWM":["D9","D10","D11"],
+		"motorspeed":[100,50,0,-50,-100],
+		"fanspeed":[0,50,100],
+		"motorPort":["M1","M2"],
+		"note":["do","re","mi","fa","so","la","si"],
+		"beats":["Half","Quarter","Eighth","Whole","Double"],
+		"ahrsdata":["pitch","yaw","roll","accelx","accely","accelz"],
+		"switch":["Off","On"],
+		"servovalue":[0,45,90,135,180],
+		"ircode":["1","2","3","4","5","6","7","8","9","*","0","#","↑","←","→","↓","OK "]
+	},
+	"values":{
+		"pitch":1,
+		"yaw":2,
+		"roll":3,
+		"accelx":4,
+		"accely":5,
+		"accelz":6,
+		"humidity":1,
+		"temperature":2,
+		"IIC":45,
+		"IIC1":44,
+		"IIC0":45,
+		"UART":46,
+		"D9A0":1,"D10A1":2,"D11A2":3,"D13A3":4,
+		"A0":0,"A1":1,"A2":2,"A3":3,"A4":4,"A5":5,"A6":6,"A7":7,
+		"A0_":100,"A1_":101,"A2_":102,"A3_":103,"A4_":104,"A5_":105,
+		"D9":9,"D10":10,"D11":11,"D12":12,"D13":13,
+		"do":523,"re":587,"mi":659,"fa":698,"so":784,"la":880,"si":988,
+		"Half":500,"Quarter":250,"Eighth":125,"Whole":1000,"Double":2000,"Zero":0,
+		"servovalue":[0,45,90,135,180],
+		"M1":1,
+		"M2":2,
+		"clear":0,
+		"0":0,
+		"1":1,
+		"2":2,
+		"3":3,
+		"4":4,
+		"5":5,
+		"6":6,
+		"7":7,
+		"8":8,
+		"9":9,
+		"*":11,
+		"#":12,
+		"↑":13,
+		"←":15,
+		"→":16,
+		"↓":14,
+		"OK ":17,		
+		"10":10,
+		"11":11,
+		"12":12,
+		"13":13,
+		"14":14,
+		"15":15,
+		
+		"On":1,
+		"Off":0,	
+		"ir":13,
+		"irremote":14,
+		"irremotecode":18,
+		"lightsensor":3,
+		"linefollower":17,
+		"timer":50,
+		"joystick":5,
+		"potentiometer":4,
+		"soundsensor":7,
+		"infrared":16,
+		"limitswitch":21,
+		"pirmotion":15,
+		"temperature":2,
+		"digital":30,
+		"analog":31,
+		"button":22,
+		"buzzer":34,
+		"button_inner":35,
+		"pressed":0,
+		"released":1,
+		"led":8,
+		"ultrasonic":1,
+		"Slot1":1,
+		"Slot2":2,
+		"Port1":1,
+		"Port2":2,
+		"Port3":3,
+		"Port4":4,
+		"Port5":5,
+		"Port6":6,
+		"Port7":7,
+		"Port8":8	
+	},
+	"translators":{
+	}
+}

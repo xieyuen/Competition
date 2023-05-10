@@ -1,0 +1,302 @@
+//i2c  master
+#if (ARDUINO >= 100)
+#include <Arduino.h>
+#else
+#include <WProgram.h>
+#endif
+
+#include"./SoftwareI2C/SoftwareI2C.h"
+
+#include <util/delay.h>
+#include <string.h>
+
+#define  i2cbitdelay 0//3
+
+//#define _delay_us delayMicroseconds
+
+#define  I2C_ACK  1 
+#define  I2C_NAK  0
+
+
+#define i2c_scl_release()     *_sclDirReg  &=~ _sclBitMask
+#define i2c_sda_release()     *_sdaDirReg  &=~ _sdaBitMask
+
+// sets SDA low and drives output
+#define i2c_sda_low()          *_sdaPortReg  &=~ _sdaBitMask; *_sdaDirReg   |=  _sdaBitMask;  
+// sets SCL low and drives output
+#define i2c_scl_low()          *_sclPortReg  &=~ _sclBitMask;  *_sclDirReg   |=  _sclBitMask; 
+
+// set SDA high and to input (releases pin) (i.e. change to input,turnon pullup)
+#define i2c_sda_high()          *_sdaDirReg   &=~ _sdaBitMask; if(usePullups) { *_sdaPortReg  |=  _sdaBitMask; } 
+// set SCL high and to input (releases)
+#define i2c_scl_high()          *_sclDirReg   &=~ _sclBitMask; if(usePullups) { *_sclPortReg  |=  _sclBitMask; } 
+
+unsigned char SoftwareI2CFlag=HARDWAREI2C_MODE;
+//
+// Constructor
+//
+SoftwareI2C::SoftwareI2C(int16_t sdaPin, int16_t sclPin) 
+{
+	//if(_sclPin>0&&_sdaPin>0&&_sclPin==sclPin&&_sdaPin==sdaPin)return ;
+    setPins(sdaPin, sclPin, true);
+    i2c_init();
+}
+
+//
+SoftwareI2C::SoftwareI2C(int16_t sdaPin, int16_t sclPin, uint8_t pullups)
+{
+	//if(_sclPin>0&&_sdaPin>0&&_sclPin==sclPin&&_sdaPin==sdaPin)return ;
+    setPins(sdaPin, sclPin, pullups);
+    i2c_init();
+}
+
+//
+// Turn Arduino pin numbers into PORTx, DDRx, and PINx
+//
+void SoftwareI2C::setPins(int16_t sdaPin, int16_t sclPin, uint8_t pullups)
+{
+    uint8_t port;
+    
+    usePullups = pullups;
+
+    _sdaPin = sdaPin;
+    _sclPin = sclPin;
+    
+    _sdaBitMask = digitalPinToBitMask(sdaPin);
+    _sclBitMask = digitalPinToBitMask(sclPin);
+    
+    port = digitalPinToPort(sdaPin);
+    _sdaPortReg  = portOutputRegister(port);
+    _sdaDirReg   = portModeRegister(port);
+    
+    port = digitalPinToPort(sclPin);
+    _sclPortReg  = portOutputRegister(port);
+    _sclDirReg   = portModeRegister(port);
+}
+
+//
+//
+//
+uint8_t SoftwareI2C::beginTransmission(uint8_t address)
+{
+    i2c_start();
+    uint8_t rc = i2c_write((address<<1) | 0); // clr read bit
+    return rc;
+}
+
+//
+uint8_t SoftwareI2C::requestFrom(uint8_t address)
+{
+    i2c_start();
+    uint8_t rc = i2c_write((address<<1) | 1); // set read bit
+    return rc;
+}
+//
+uint8_t SoftwareI2C::requestFrom(int address)
+{
+    return requestFrom( (uint8_t) address);
+}
+
+//
+uint8_t SoftwareI2C::beginTransmission(int address)
+{
+    return beginTransmission((uint8_t)address);
+}
+
+//
+//
+//
+uint8_t SoftwareI2C::endTransmission(void)
+{
+    i2c_stop();
+    //return ret;  // FIXME
+    return 0;
+}
+
+// must be called in:
+// slave tx event callback
+// or after beginTransmission(address)
+uint8_t SoftwareI2C::send(uint8_t data)
+{
+    return i2c_write(data);
+}
+
+// must be called in:
+// slave tx event callback
+// or after beginTransmission(address)
+void SoftwareI2C::send(uint8_t* data, uint8_t quantity)
+{
+    for(uint8_t i = 0; i < quantity; ++i){
+        send(data[i]);
+    }
+}
+
+// must be called in:
+// slave tx event callback
+// or after beginTransmission(address)
+void SoftwareI2C::send(char* data)
+{
+    send((uint8_t*)data, strlen(data));
+}
+
+// must be called in:
+// slave tx event callback
+// or after beginTransmission(address)
+void SoftwareI2C::send(int data)
+{
+    send((uint8_t)data);
+}
+void SoftwareI2C::write(int data)
+{
+    send((uint8_t)data);
+}
+//--------------------------------------------------------------------
+
+
+void SoftwareI2C::i2c_writebit( uint8_t c )
+{
+    if ( c > 0 ) { i2c_sda_high(); } 
+		else {  i2c_sda_low();  }
+
+    i2c_scl_high();
+    _delay_us(i2cbitdelay);
+
+    i2c_scl_low();
+    _delay_us(i2cbitdelay);
+
+    if ( c > 0 ) { i2c_sda_low(); }
+    _delay_us(i2cbitdelay);
+}
+
+//
+uint8_t SoftwareI2C::i2c_readbit(void)
+{
+    i2c_sda_high();
+    i2c_scl_high();
+    _delay_us(i2cbitdelay);
+
+    uint8_t port = digitalPinToPort(_sdaPin);
+    volatile uint8_t* pinReg = portInputRegister(port);
+    uint8_t c = *pinReg;  // I2C_PIN;
+
+    i2c_scl_low();
+    _delay_us(i2cbitdelay);
+
+    return ( c & _sdaBitMask) ? 1 : 0;
+}
+
+// Inits bitbanging port, must be called before using the functions below
+//
+void SoftwareI2C::i2c_init(void)
+{
+    //I2C_PORT &=~ (_BV( I2C_SDA ) | _BV( I2C_SCL ));
+    //*_sclPortReg &=~ (_sdaBitMask | _sclBitMask);
+    i2c_sda_high();
+    i2c_scl_high();
+    
+    _delay_us(i2cbitdelay);
+}
+
+// Send a START Condition
+//
+void SoftwareI2C::i2c_start(void)
+{
+    // set both to high at the same time
+    //I2C_DDR &=~ (_BV( I2C_SDA ) | _BV( I2C_SCL ));
+    //*_sclDirReg &=~ (_sdaBitMask | _sclBitMask);
+    i2c_sda_high();
+    i2c_scl_high();
+
+    _delay_us(i2cbitdelay);
+   
+    i2c_sda_low();
+    _delay_us(i2cbitdelay);
+
+    i2c_scl_low();
+    _delay_us(i2cbitdelay);
+}
+
+void SoftwareI2C::i2c_repstart(void)
+{
+    // set both to high at the same time (releases drive on both lines)
+    //I2C_DDR &=~ (_BV( I2C_SDA ) | _BV( I2C_SCL ));
+    //*_sclDirReg &=~ (_sdaBitMask | _sclBitMask);
+    i2c_sda_high();
+    i2c_scl_high();
+
+    i2c_scl_low();                           // force SCL low
+    _delay_us(i2cbitdelay);
+
+    i2c_sda_release();                      // release SDA
+    _delay_us(i2cbitdelay);
+
+    i2c_scl_release();                      // release SCL
+    _delay_us(i2cbitdelay);
+
+    i2c_sda_low();                           // force SDA low
+    _delay_us(i2cbitdelay);
+}
+
+// Send a STOP Condition
+//
+void SoftwareI2C::i2c_stop(void)
+{
+    i2c_scl_high();
+    _delay_us(i2cbitdelay);
+
+    i2c_sda_high();
+    _delay_us(i2cbitdelay);
+}
+
+// write a byte to the I2C slave device
+//
+uint8_t SoftwareI2C::i2c_write( uint8_t c )
+{
+    for ( uint8_t i=0;i<8;i++) 
+		{
+        i2c_writebit( c & 0x80 );
+        c<<=1;
+    }
+
+    return i2c_readbit();
+}
+
+// read a byte from the I2C slave device
+//
+uint8_t SoftwareI2C::i2c_read( uint8_t ack )
+{
+    uint8_t res = 0;
+
+    for ( uint8_t i=0;i<8;i++) 
+		{
+        res <<= 1;
+        res |= i2c_readbit();  
+    }
+
+    if ( ack )
+        i2c_writebit( 0 );
+    else
+        i2c_writebit( 1 );
+
+    _delay_us(i2cbitdelay);
+
+    return res;
+}
+
+// FIXME: this isn't right, surely
+uint8_t SoftwareI2C::receive( uint8_t ack )
+{
+  return i2c_read( ack );
+}
+
+//
+uint8_t SoftwareI2C::receive()
+{
+    return i2c_read( I2C_ACK );
+}
+
+//
+uint8_t SoftwareI2C::receiveLast()
+{
+    return i2c_read( I2C_NAK );
+}

@@ -1,0 +1,13 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.2">
+   <id>cc.makeblock.BluetoothExt</id>
+   <versionNumber>1.0.0</versionNumber>
+   <platforms>
+       <platform name="Windows-x86">
+           <applicationDeployment>
+               <nativeLibrary>BluetoothDLL.dll</nativeLibrary>
+               <initializer>BluetoothExtInitializer</initializer>
+               <finalizer>BluetoothExtFinalizer</finalizer>
+           </applicationDeployment>
+       </platform>
+   </platforms>
+</extension>

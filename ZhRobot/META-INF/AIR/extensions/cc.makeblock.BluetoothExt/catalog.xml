@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="BluetoothExt" mod="1429151394128" signatureChecksum="2433621008" >
+        <def id="BluetoothExt" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="flash.utils:ByteArray" type="e" /> 
+        <dep id="flash.utils:Timer" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.events:TimerEvent" type="e" /> 
+        <dep id="flash.utils:getTimer" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.desktop:NativeApplication" type="e" /> 
+        <dep id="flash.events:Event" type="s" /> 
+        <dep id="flash.events:IEventDispatcher" type="s" /> 
+        <dep id="flash.utils:ByteArray" type="s" /> 
+        <dep id="flash.utils:Timer" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.events:TimerEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="_df199395078c6ca95d0cc0be002437836c75f729ff6eb4570fbd08f7715f09e3_flash_display_Sprite" mod="1429157627761" signatureChecksum="726825481" >
+        <def id="_df199395078c6ca95d0cc0be002437836c75f729ff6eb4570fbd08f7715f09e3_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="52fc64baf378b6d11bc76897b5d99d5476f3b35b9d58c50bd2847639beff9ca2"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

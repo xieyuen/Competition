@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/19.0">
+
+<!-- Adobe AIR Application Descriptor File Template.
+
+	Specifies parameters for identifying, installing, and launching AIR applications.
+
+	xmlns - The Adobe AIR namespace: http://ns.adobe.com/air/application/3.4
+			The last segment of the namespace specifies the version 
+			of the AIR runtime required for this application to run.
+			
+	minimumPatchLevel - The minimum patch level of the AIR runtime required to run 
+			the application. Optional.
+-->
+
+	<!-- A universally unique application identifier. Must be unique across all AIR applications.
+	Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. 
+	com.makeblock.Scratch3.4.5
+	软件缓存ID
+	-->
+	<id>ZhRobot2.0.2</id>
+
+	<!-- Used as the filename for the application. Required.安装后软件文件夹名称 -->
+	<filename>ZhRobot</filename>
+
+	<!-- The name that is displayed in the AIR application installer. 
+	May have multiple values for each language. See samples or xsd schema file. Optional.软件显示名称 -->
+	<name>
+        <text xml:lang="zh-CN">ZhRobot</text>
+		<text xml:lang="EN">ZhRobot - Based On Scratch From the MIT Media Lab</text>
+	</name>
+	
+	<!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
+	Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+	An updated version of application must have a versionNumber value higher than the previous version. Required for namespace >= 2.5 . -->
+	<versionNumber>2.0.2</versionNumber>
+	<supportedProfiles>extendedDesktop</supportedProfiles>
+	<!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents the version of the application, as it should be shown to users. Optional. -->
+
+	<!-- Description, displayed in the AIR application installer.
+	May have multiple values for each language. See samples or xsd schema file. Optional. -->
+	<description>
+		<text xml:lang="zh-CN"><![CDATA[RobotLab是基于MIT媒体实验室的开源Scratch代码开发的软件。]]></text>
+		<text xml:lang="EN"><![CDATA[RobotLab is a modified version of Scratch 2.0 developped by the MIT Media Lab.]]></text>
+	</description>
+
+	<!-- Copyright information. Optional -->
+	<copyright>ZhRobot</copyright>
+
+	<!-- Publisher ID. Used if you're updating an application created prior to 1.5.3 -->
+	<!--<publisherID>Makeblock</publisherID> --> 
+
+	<!-- Settings for the application's initial window. Required. -->
+	<initialWindow>
+		<!-- The main SWF or HTML file of the application. Required. -->
+		<!-- Note: In Flash Builder, the SWF reference is set automatically.软件主程序 ZhRobot   RobotLab-->
+		<content>ZhRobot.swf</content>
+		
+
+		<!-- The window's initial width in pixels. Optional. -->
+		<width>1280</width> 
+
+		<!-- The window's initial height in pixels. Optional. -->
+		 <height>768</height> 
+
+		<!-- The window's initial x position. Optional. -->
+		<x>50</x>
+
+		<!-- The window's initial y position. Optional. -->
+		<y>50</y>
+
+		<!-- The window's minimum size, specified as a width/height pair in pixels, such as "400 200". Optional. -->
+		<minSize>500 500</minSize>
+
+
+
+		<autoOrients>false</autoOrients>
+        <fullScreen>false</fullScreen>
+        <visible>true</visible>
+    </initialWindow>
+
+	 <icon>
+		<image16x16>icons/AppIcon16.png</image16x16>
+		<image32x32>icons/AppIcon32.png</image32x32>
+		<image48x48>icons/AppIcon48.png</image48x48>
+		<image128x128>icons/AppIcon128.png</image128x128>
+	</icon>
+
+	<fileTypes> 
+
+		<!-- Defines one file type. Optional. -->
+	<fileType> 
+
+			<!-- The name that the system displays for the registered file type. Required. -->
+			 <name>ZhRobot</name> 
+
+			<!-- The extension to register. Required. -->
+			 <extension>sb2</extension> 
+			
+			<!-- The description of the file type. Optional. RobotLab.swf-->
+			 <description>ZhRobot Project File</description> 
+			
+			<!-- The MIME content type. -->
+			 <contentType>application/ZhRobot.project-file</contentType> 
+			
+			<!-- The icon to display for the file type. Optional. -->
+			<icon>
+				<image16x16>icons/ProjectIcon16.png</image16x16>
+				<image32x32>icons/ProjectIcon32.png</image32x32>
+				<image48x48>icons/ProjectIcon48.png</image48x48>
+				<image128x128>icons/ProjectIcon128.png</image128x128>
+			</icon> 
+			
+		 </fileType> 
+	</fileTypes> 
+
+	
+<extensions>
+        <extensionID>cc.makeblock.AIRSerial</extensionID>
+        <extensionID>cc.makeblock.BluetoothExt</extensionID>
+        <extensionID>cc.makeblock.AirHID</extensionID>
+    </extensions>
+</application>

@@ -1,0 +1,10 @@
+{
+  "builtInLibrariesFolders": "C:\\DC\\zhrobot190611\\Zhrobot202\\Arduino\\libraries",
+  "customBuildProperties": "build.path=C:\\DC\\zhrobot190611\\Zhrobot202/zhrobot202-builder,build.warn_data_percentage=75,runtime.tools.arduinoOTA.path=C:\\DC\\zhrobot190611\\Zhrobot202\\Arduino\\hardware\\tools\\avr,runtime.tools.avr-gcc.path=C:\\DC\\zhrobot190611\\Zhrobot202\\Arduino\\hardware\\tools\\avr,runtime.tools.avrdude.path=C:\\DC\\zhrobot190611\\Zhrobot202\\Arduino\\hardware\\tools\\avr",
+  "fqbn": "arduino:avr:nano:cpu=atmega328",
+  "hardwareFolders": "C:\\DC\\zhrobot190611\\Zhrobot202\\Arduino\\hardware",
+  "otherLibrariesFolders": "D:\\UserData\\Personal\\Arduino\\libraries",
+  "runtime.ide.version": "10805",
+  "sketchLocation": "C:\\Users\\Administrator\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_MyAPP5_2\\project_MyAPP5_2.ino",
+  "toolsFolders": "C:\\DC\\zhrobot190611\\Zhrobot202\\Arduino\\tools-builder,C:\\DC\\zhrobot190611\\Zhrobot202\\Arduino\\hardware\\tools\\avr"
+}

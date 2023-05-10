@@ -1,0 +1,27 @@
+C:\DC\zhrobot190611\Zhrobot202\zhrobot202-builder\libraries\RobotLab\RobotLab.cpp.o: \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\RobotLab\RobotLab.cpp \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/binary.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/WCharacter.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/WString.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/HardwareSerial.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/Print.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/Printable.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/USBAPI.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\RobotLab\RobotLab.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\Servo\src/Servo.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\Servo\src/avr/ServoTimers.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\RobotLab\./IRremote/RLIRremote.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/wiring_private.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\RobotLab\./DHT11/DHT11.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\RobotLab\./LEDMatrix/LEDMatrix.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\libraries\Wire\src/Wire.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\RobotLab\./SoftwareI2C/SoftwareI2C.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\RobotLab\./LED7Segment/LED7Segment.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\RobotLab\./LCD1602/LCD1602.h \
+ C:\DC\zhrobot190611\Zhrobot202\Arduino\libraries\RobotLab\MPU6050/MPU6050.h
