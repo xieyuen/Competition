@@ -1,13 +1,13 @@
-C:\DC\zhrobot190611\Zhrobot202\zhrobot202-builder\core\CDC.cpp.o: \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\CDC.cpp \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\USBAPI.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\Arduino.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\binary.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\WCharacter.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\WString.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\Stream.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\Print.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\Printable.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h
+D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\zhrobot202-builder\core\CDC.cpp.o: \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\CDC.cpp \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\USBAPI.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\Arduino.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\binary.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\WCharacter.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\WString.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\HardwareSerial.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\Stream.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\Print.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\Printable.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h

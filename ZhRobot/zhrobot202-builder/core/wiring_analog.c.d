@@ -1,7 +1,7 @@
-C:\DC\zhrobot190611\Zhrobot202\zhrobot202-builder\core\wiring_analog.c.o: \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\wiring_analog.c \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\wiring_private.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\Arduino.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\cores\arduino\binary.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
- C:\DC\zhrobot190611\Zhrobot202\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h
+D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\zhrobot202-builder\core\wiring_analog.c.o: \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\wiring_analog.c \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\wiring_private.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\Arduino.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino\binary.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\ZhRobot\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h
