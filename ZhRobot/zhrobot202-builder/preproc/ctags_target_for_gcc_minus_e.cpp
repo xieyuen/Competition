@@ -1,7 +1,7 @@
-# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_________4_3\\project_________4_3.ino"
-# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_________4_3\\project_________4_3.ino"
-# 2 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_________4_3\\project_________4_3.ino" 2
-# 3 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_________4_3\\project_________4_3.ino" 2
+# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
+# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
+# 2 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino" 2
+# 3 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino" 2
 
 
 void __func__36935_32447_20572_27490_36895_24230(double _var_36895_24230, double light);
@@ -250,8 +250,7 @@ void __func__22522_30784_24033_32447_36895_24230(double _var_36895_24230)
 
 
 void setup(){
-    SetMotor(1,50);
-    SetIO(100,1);
+    SetServo(9,90);
 
 }
 
