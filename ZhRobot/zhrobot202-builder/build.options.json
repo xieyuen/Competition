@@ -1,6 +1,6 @@
 {
   "builtInLibrariesFolders": "D:\\DataFiles\\Windows\\Documents\\GitHub\\competition\\ZhRobot\\Arduino\\libraries",
-  "customBuildProperties": "build.path=D:\\DataFiles\\Windows\\Documents\\GitHub\\competition\\ZhRobot/zhrobot202-builder,build.warn_data_percentage=75,runtime.tools.arduinoOTA.path=D:\\DataFiles\\Windows\\Documents\\GitHub\\competition\\ZhRobot\\Arduino\\hardware\\tools\\avr,runtime.tools.avrdude.path=D:\\DataFiles\\Windows\\Documents\\GitHub\\competition\\ZhRobot\\Arduino\\hardware\\tools\\avr,runtime.tools.avr-gcc.path=D:\\DataFiles\\Windows\\Documents\\GitHub\\competition\\ZhRobot\\Arduino\\hardware\\tools\\avr",
+  "customBuildProperties": "build.path=D:\\DataFiles\\Windows\\Documents\\GitHub\\competition\\ZhRobot/zhrobot202-builder,build.warn_data_percentage=75,runtime.tools.avr-gcc.path=D:\\DataFiles\\Windows\\Documents\\GitHub\\competition\\ZhRobot\\Arduino\\hardware\\tools\\avr,runtime.tools.avrdude.path=D:\\DataFiles\\Windows\\Documents\\GitHub\\competition\\ZhRobot\\Arduino\\hardware\\tools\\avr,runtime.tools.arduinoOTA.path=D:\\DataFiles\\Windows\\Documents\\GitHub\\competition\\ZhRobot\\Arduino\\hardware\\tools\\avr",
   "fqbn": "arduino:avr:nano:cpu=atmega328",
   "hardwareFolders": "D:\\DataFiles\\Windows\\Documents\\GitHub\\competition\\ZhRobot\\Arduino\\hardware",
   "otherLibrariesFolders": "D:\\DataFiles\\Windows\\Documents\\Arduino\\libraries",

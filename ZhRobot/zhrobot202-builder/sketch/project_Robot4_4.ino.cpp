@@ -24,7 +24,7 @@ void __func__22522_30784_24033_32447_36895_24230(double _var_36895_24230);
 
 #line 250 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
 void setup();
-#line 257 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
+#line 255 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
 void loop();
 #line 23 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
 void __func__36935_32447_20572_27490_36895_24230(double _var_36895_24230, double light)
@@ -255,9 +255,7 @@ void __func__22522_30784_24033_32447_36895_24230(double _var_36895_24230)
 
 
 void setup(){
-    SetServo(9,45);
-    _delay(1);
-    SetServo(9,90);
+    __func__36935_32447_20572_27490_36895_24230(30,1);
     
 }
 
