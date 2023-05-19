@@ -1,5 +1,5 @@
-#line 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
-#line 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
+#line 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_5_18_n4_5\\project_Robot_5_18_n4_5.ino"
+#line 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_5_18_n4_5\\project_Robot_5_18_n4_5.ino"
 #include <Arduino.h>
 #include <RobotLab.h>
 
@@ -22,11 +22,11 @@ void __func__36895_24230_25511_21046(double zmd, String _var_21491_39532_36798, 
 void __func__22522_30784_24033_32447_36895_24230(double _var_36895_24230);
 
 
-#line 250 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
+#line 250 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_5_18_n4_5\\project_Robot_5_18_n4_5.ino"
 void setup();
-#line 255 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
+#line 274 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_5_18_n4_5\\project_Robot_5_18_n4_5.ino"
 void loop();
-#line 23 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_4\\project_Robot4_4.ino"
+#line 23 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_5_18_n4_5\\project_Robot_5_18_n4_5.ino"
 void __func__36935_32447_20572_27490_36895_24230(double _var_36895_24230, double light)
 {
     __func__35835_21462_20809_30005_20256_24863_22120_29366_24577();
@@ -255,6 +255,25 @@ void __func__22522_30784_24033_32447_36895_24230(double _var_36895_24230)
 
 
 void setup(){
+    SetMotor(1,30);
+    SetMotor(2,30);
+    _delay(0.2);
+    __func__36935_32447_20572_27490_36895_24230(30,13);
+    __func__33258_23450_20041_36716_24367(0,25,1);
+    __func__36935_32447_20572_27490_36895_24230(30,1);
+    __func__36208_36317_31163(30,30);
+    __func__33258_23450_20041_36716_24367(0,25,2);
+    SetServo(10,0);
+    __func__36935_32447_20572_27490_36895_24230(30,13);
+    SetMotor(1,20);
+    SetMotor(2,20);
+    _delay(0.1);
+    SetMotor(1,0);
+    SetMotor(2,0);
+    SetServo(10,180);
+    __func__36935_32447_20572_27490_36895_24230(-30,13);
+    __func__36208_36317_31163(30,30);
+    __func__33258_23450_20041_36716_24367(0,25,2);
     __func__36935_32447_20572_27490_36895_24230(30,1);
     
 }
