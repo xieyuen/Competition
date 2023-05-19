@@ -1,7 +1,7 @@
-# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_5\\project_Robot4_5.ino"
-# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_5\\project_Robot4_5.ino"
-# 2 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_5\\project_Robot4_5.ino" 2
-# 3 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot4_5\\project_Robot4_5.ino" 2
+# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_2___4_5\\project_2___4_5.ino"
+# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_2___4_5\\project_2___4_5.ino"
+# 2 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_2___4_5\\project_2___4_5.ino" 2
+# 3 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_2___4_5\\project_2___4_5.ino" 2
 
 
 void __func__36935_32447_20572_27490_36895_24230(double _var_36895_24230, double light);
@@ -257,8 +257,7 @@ void setup(){
     __func__33258_23450_20041_36716_24367(0,25,1);
     __func__36935_32447_20572_27490_36895_24230(30,1);
     __func__36208_36317_31163(30,30);
-    __func__33258_23450_20041_36716_24367(0,30,1);
-    __func__33258_23450_20041_36716_24367(0,20,2);
+    __func__33258_23450_20041_36716_24367(0,30,2);
     SetServo(10,0);
     __func__36935_32447_20572_27490_36895_24230(30,13);
     SetServo(10,90);
@@ -267,12 +266,12 @@ void setup(){
     _delay(0.3);
     SetMotor(1,0);
     SetMotor(2,0);
-    __func__33258_23450_20041_36716_24367(-15,15,1);
-    __func__33258_23450_20041_36716_24367(-20,20,2);
+    __func__33258_23450_20041_36716_24367(-15,15,2);
     __func__36935_32447_20572_27490_36895_24230(30,13);
     __func__36208_36317_31163(30,30);
     __func__33258_23450_20041_36716_24367(0,25,2);
     __func__36935_32447_20572_27490_36895_24230(30,13);
+    SetLed(9,1);
 
 }
 
