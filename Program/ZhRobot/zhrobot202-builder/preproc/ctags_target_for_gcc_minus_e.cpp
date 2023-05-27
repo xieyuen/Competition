@@ -1,7 +1,7 @@
-# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_competition4_0\\project_Robot_competition4_0.ino"
-# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_competition4_0\\project_Robot_competition4_0.ino"
-# 2 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_competition4_0\\project_Robot_competition4_0.ino" 2
-# 3 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_competition4_0\\project_Robot_competition4_0.ino" 2
+# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_competition4_5\\project_Robot_competition4_5.ino"
+# 1 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_competition4_5\\project_Robot_competition4_5.ino"
+# 2 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_competition4_5\\project_Robot_competition4_5.ino" 2
+# 3 "C:\\Users\\xieyu\\AppData\\Roaming\\ZhRobot2.0.2\\Local Store\\scratchTemp\\project_Robot_competition4_5\\project_Robot_competition4_5.ino" 2
 
 
 void __func__25968_25454_21021_22987_21270();
@@ -24,6 +24,7 @@ void end();
 double _var_24033_32447_36895_24230;
 double _var_52_118_30005_26426_24320_21551_35282_24230;
 double _var_52_118_30005_26426_20851_38381_35282_24230;
+void got();
 
 
 void __func__25968_25454_21021_22987_21270()
@@ -185,6 +186,13 @@ void __func__36935_32447_20572_27490(double _var_36895_24230, double light)
                     __func__22522_30784_24033_32447_36895_24230(_var_36895_24230);
                 }
             }else{
+                if(((light)==(31))){
+                    while(!((((_var_20809_30005_49)==(1))) || (((_var_20809_30005_51)==(1)))))
+                    {
+                        __func__22522_30784_24033_32447_36895_24230(_var_36895_24230);
+                    }
+                }else{
+                }
             }
         }
     }
@@ -278,25 +286,29 @@ void end()
 
     SetServo(10,_var_52_118_30005_26426_20851_38381_35282_24230);
 
-    SetMotor(1,-10);
+}
 
-    SetMotor(2,5);
-
-    _delay(0.15);
-
-    while(!((((_var_20809_30005_49)==(1))) || ((((_var_20809_30005_50)==(1))) || (((_var_20809_30005_51)==(1))))))
-    {
-    }
-
-    __func__36208_36317_31163(30,30);
+void got()
+{
+    __func__36208_36317_31163(-30,1000);
 
     __func__33258_23450_20041_36716_24367(25,0,2);
 
     __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,13);
 
-    __func__36208_36317_31163(30,1000);
+    __func__36208_36317_31163(30,30);
 
-    __func__36895_24230_25511_21046(30,30);
+    __func__33258_23450_20041_36716_24367(0,25,2);
+
+    __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,3);
+
+    __func__33258_23450_20041_36716_24367(0,25,2);
+
+    __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,3);
+
+    __func__33258_23450_20041_36716_24367(0,25,2);
+
+    __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,13);
 
 }
 
@@ -305,43 +317,7 @@ void setup(){
     _var_52_118_30005_26426_24320_21551_35282_24230 = 0;
     _var_52_118_30005_26426_20851_38381_35282_24230 = 135;
     _var_24033_32447_36895_24230 = 30;
-    SetMotor(1,30);
-    SetMotor(2,30);
-    _delay(0.2);
-    __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,13);
-    __func__33258_23450_20041_36716_24367(0,25,2);
-    SetEncoder(1);
-    __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,1);
-    if((GetEncoder(1)) < (500)){
-        __func__33258_23450_20041_36716_24367(0,25,2);
-        __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,1);
-    }
-    __func__36208_36317_31163(30,30);
-    __func__33258_23450_20041_36716_24367(0,30,2);
-    SetServo(10,_var_52_118_30005_26426_24320_21551_35282_24230);
-    __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,13);
-    __func__36208_36317_31163(25,30);
-    __func__36895_24230_25511_21046(30,10);
-    _delay(0.2);
-    SetMotor(1,0);
-    SetMotor(2,0);
-    SetServo(10,_var_52_118_30005_26426_20851_38381_35282_24230);
-    SetEncoder(1);
-    SetMotor(1,-30);
-    SetMotor(2,-30);
-    while(!(((((GetEncoder(1))>0?(GetEncoder(1)):-(GetEncoder(1))))==(1000))))
-    {
-    }
-    __func__33258_23450_20041_36716_24367(25,0,2);
-    __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,13);
-    __func__36208_36317_31163(30,30);
-    __func__33258_23450_20041_36716_24367(0,25,2);
-    __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,3);
-    __func__33258_23450_20041_36716_24367(0,25,2);
-    __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,3);
-    __func__33258_23450_20041_36716_24367(0,25,2);
-    __func__36935_32447_20572_27490(_var_24033_32447_36895_24230,13);
-    end();
+    got();
 
 }
 

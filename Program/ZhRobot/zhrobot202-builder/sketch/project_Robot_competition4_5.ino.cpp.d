@@ -1,5 +1,5 @@
-D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\zhrobot202-builder\libraries\RobotLab\MPU6050.cpp.o: \
- D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\libraries\RobotLab\MPU6050.cpp \
+D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\zhrobot202-builder\sketch\project_Robot_competition4_5.ino.cpp.o: \
+ D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\zhrobot202-builder\sketch\project_Robot_competition4_5.ino.cpp \
  D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
  D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino/binary.h \
  D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino/WCharacter.h \
@@ -12,7 +12,6 @@ D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\zhrobot202-bui
  D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
  D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
  D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h \
- D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\hardware\arduino\avr\libraries\Wire\src/Wire.h \
- D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
- D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\libraries\RobotLab\./MPU6050/MPU6050.h \
- D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\libraries\RobotLab\./SoftwareI2C/SoftwareI2C.h
+ D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\libraries\RobotLab/RobotLab.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\libraries\Servo\src/Servo.h \
+ D:\DataFiles\Windows\Documents\GitHub\competition\Program\ZhRobot\Arduino\libraries\Servo\src/avr/ServoTimers.h
